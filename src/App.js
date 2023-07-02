@@ -22,7 +22,13 @@ function App() {
   }
   const divide = (e) => {
     e.preventDefault()
-    setResult((result) => result / Number(inputRef.current.value))
+    console.log(e)
+    if (Number(inputRef.current.value) === 0) {
+      alert("divied Zero is prohibited.")
+    }
+    else {
+      setResult((result) => result / Number(inputRef.current.value))
+    }
   }
   const resetInput = (e) => {
     e.preventDefault()
